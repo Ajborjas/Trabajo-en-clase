@@ -91,4 +91,17 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
         lista.add(new Animales(nombreCientifico, nombreComun, habitat, alimento, rasgos, geografica, vida));
     }
     
+    public static void editarAlumno(){
+        System.out.print("Ingrese la posicion: ");
+        int pos = sc.nextInt();
+        System.out.println("1. Un atributo");
+        System.out.println("2. Todos los atributos");
+        System.out.print("Ingrese la opcion: ");
+        int opcion = sc.nextInt();
+        if(opcion == 1)
+            editarUnAtributo(pos);
+        else if(opcion == 2)
+            editarAtributos(pos);
+    }
+    
     
