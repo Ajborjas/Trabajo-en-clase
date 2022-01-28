@@ -104,4 +104,40 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
             editarAtributos(pos);
     }
     
+    public static void editarUnAtributo(int pos){
+        System.out.println("1. Nombre Cientifico");
+        System.out.println("2. Nombre Comun");
+        System.out.println("3. Habitat");
+        System.out.println("4. Alimento");
+        System.out.println("5. Rasgos");
+        System.out.println("6. Geografica");
+        System.out.println("7. Vida");
+        System.out.print("Ingrese la opcion: ");
+        int opcion = sc.nextInt();
+        if(opcion == 1){
+            System.out.print("Nombre Cientifico: ");
+            lista.get(pos).setNombreCientifico(sc.next());
+        }else if(opcion == 2){
+            System.out.print("Nombre Comun: ");
+            lista.get(pos).setNombreComun(sc.next());
+        }else if(opcion == 3){
+            System.out.print("Habitat: ");
+            lista.get(pos).setHabitat(sc.next());
+        }else if(opcion == 4){
+            System.out.println("Alimento: ");
+            lista.get(pos).setAlimento(sc.next());
+        }else if(opcion == 5){
+            System.out.print("Geografica: ");
+            lista.get(pos).setRasgos(sc.next());
+        }else if(opcion == 6){
+            System.out.print("Año: ");
+            lista.get(pos).setDescripcionGeo(sc.next());
+        }else if(opcion == 7){
+            System.out.println("Vida: ");
+            lista.get(pos).setVida(sc.nextInt());
+        }
+    }
     
+   
+    
+}
