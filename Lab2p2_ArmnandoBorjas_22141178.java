@@ -34,4 +34,18 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
     }
     
     
+    public static int menu(){
+        System.out.println("");
+        System.out.println("");
+        System.out.println("------------Menu-------------");
+        System.out.println("0. Salir");
+        System.out.println("1. Crear alumnos\n" +
+                            "2. Editar alumnos\n" +
+                            "3. Eliminar alumno\n" +
+                            "4. Listar alumnos\n" +
+                            "5. Administrador Random\n" +
+                            "Ingrese la opcion: ");
+        return sc.nextInt();
+    }
     
+}
