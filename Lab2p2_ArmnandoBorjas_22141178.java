@@ -21,6 +21,7 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
     public static Animales animal3 = new Animales();
     public static Animales logueado = new Animales();
     public static Scanner sc = new Scanner(System.in);
+    public static int buscar = 0;
     public static void main(String[] args) {
         animal1 = new Animales("Cobra", "Ophiophagus hannah", "Africa", "ratones", "escamas", "salvaje", 9 );
         animal2 = new Animales("Tiburon", "Selachimorpha", "oceano", "peces", "colmillos_afilados", "salvaje", 20 );
@@ -62,6 +63,13 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
                 break;
             case 4:
                 listarAnimal();
+                break;
+            case 5:
+                System.out.println("Elegia el nombre cientifico que quiere buscar: ");
+                String nombre = sc.next();
+                buscarAnimal(nombre);
+                if(buscar==2)
+                    System.out.println(lista.toString());
                 break;
             default:
                 break;
@@ -162,7 +170,16 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
     public static void listarAnimal(){
         for (Animales animales : lista) {
             System.out.println(animales.toString());
+            
+        }
+        
+    }
+    private static void buscarAnimal(String nombreCientifico) {
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i).getNombreCientifico().equals(nombreCientifico)) {
+                buscar = 2;
+                break;
+            }
         }
     }
-    
 }
