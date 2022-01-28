@@ -48,4 +48,47 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
         return sc.nextInt();
     }
     
-}
+    public static void opciones(int opcion){
+        switch (opcion) {
+            case 0:
+                System.exit(0);
+            case 1:
+                crearAlumnos();
+                break;
+            case 2:
+                editarAlumno();
+                break;
+            case 3:
+                eliminarAnimal();
+                break;
+            case 4:
+                listarAnimal();
+                break;
+            default:
+                break;
+        }
+    }
+    
+    
+    
+
+    
+    public static void crearAlumnos(){
+        System.out.print("Nombre Cientifico: ");
+        String nombreCientifico = sc.nextLine();
+        System.out.print("Nombre Comun: ");
+        String nombreComun = sc.next();
+        System.out.print("Habitat: ");
+        String habitat = sc.next();
+        System.out.print("Alimento: ");
+        String alimento = sc.next();
+        System.out.print("Rasgos: ");
+        String rasgos = sc.nextLine();
+        System.out.print("Geografica: ");
+        String geografica = sc.nextLine();
+        System.out.print("Vida: ");
+        int vida = sc.nextInt();
+        lista.add(new Animales(nombreCientifico, nombreComun, habitat, alimento, rasgos, geografica, vida));
+    }
+    
+    
