@@ -39,11 +39,10 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
         System.out.println("");
         System.out.println("------------Menu-------------");
         System.out.println("0. Salir");
-        System.out.println("1. Crear alumnos\n" +
-                            "2. Editar alumnos\n" +
-                            "3. Eliminar alumno\n" +
-                            "4. Listar alumnos\n" +
-                            "5. Administrador Random\n" +
+        System.out.println("1. Crear animal\n" +
+                            "2. Editar animal\n" +
+                            "3. Eliminar animal\n" +
+                            "4. Listar animal\n" +
                             "Ingrese la opcion: ");
         return sc.nextInt();
     }
@@ -53,10 +52,10 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
             case 0:
                 System.exit(0);
             case 1:
-                crearAlumnos();
+                crearAnimal();
                 break;
             case 2:
-                editarAlumno();
+                editarAnimal();
                 break;
             case 3:
                 eliminarAnimal();
@@ -73,7 +72,7 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
     
 
     
-    public static void crearAlumnos(){
+    public static void crearAnimal(){
         System.out.print("Nombre Cientifico: ");
         String nombreCientifico = sc.nextLine();
         System.out.print("Nombre Comun: ");
@@ -91,7 +90,7 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
         lista.add(new Animales(nombreCientifico, nombreComun, habitat, alimento, rasgos, geografica, vida));
     }
     
-    public static void editarAlumno(){
+    public static void editarAnimal(){
         System.out.print("Ingrese la posicion: ");
         int pos = sc.nextInt();
         System.out.println("1. Un atributo");
@@ -138,6 +137,32 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
         }
     }
     
-   
+    public static void editarAtributos(int pos){
+        System.out.print("Nombre Cientifico: ");
+        lista.get(pos).setNombreCientifico(sc.next());
+        System.out.print("NombreComun: ");
+        lista.get(pos).setNombreComun(sc.next());
+        System.out.print("Habitat: ");
+        lista.get(pos).setHabitat(sc.next());
+        System.out.println("Alimentacion: ");
+        lista.get(pos).setAlimento(sc.next());
+        System.out.print("Rasgos: ");
+        lista.get(pos).setRasgos(sc.next());
+        System.out.print("Descripcion Geografica: ");
+        lista.get(pos).setDescripcionGeo(sc.next());
+        System.out.println("Vida : ");
+        lista.get(pos).setVida(sc.nextInt());
+    }
+    
+    public static void eliminarAnimal(){
+        System.out.print("Posicion: ");
+        lista.remove(sc.nextInt());
+    }
+ 
+    public static void listarAnimal(){
+        for (Animales animales : lista) {
+            System.out.println(animales.toString());
+        }
+    }
     
 }
