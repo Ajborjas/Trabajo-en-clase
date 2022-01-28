@@ -44,6 +44,7 @@ public class Lab2p2_ArmnandoBorjas_22141178 {
                             "2. Editar animal\n" +
                             "3. Eliminar animal\n" +
                             "4. Listar animal\n" +
+                            "5. Buscar animal\n" +
                             "Ingrese la opcion: ");
         return sc.nextInt();
     }
